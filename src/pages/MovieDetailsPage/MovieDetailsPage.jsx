@@ -19,10 +19,10 @@ function MovieDetailsPage() {
   const location = useLocation();
   const goBackRef = useRef(location);
 
-  useEffect(() => {
-    console.log(location);
-    console.log(goBackRef.current.state);
-  }, []);
+  // useEffect(() => {
+  //   console.log(location);
+  //   console.log(goBackRef.current.state);
+  // }, []);
   useEffect(() => {
     async function fetchTrends() {
       try {
