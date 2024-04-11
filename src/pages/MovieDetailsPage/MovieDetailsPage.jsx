@@ -48,7 +48,9 @@ function MovieDetailsPage() {
       ) : (
         <>
           <Link
-            to={goBackRef.current.state ? goBackRef.current.state.from : "/"}
+            to={
+              goBackRef.current.state ? goBackRef.current.state.from : "/movies"
+            }
           >
             Back
           </Link>
