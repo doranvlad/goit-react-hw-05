@@ -13,7 +13,7 @@ export const fetchFromTmdbSearch = (search = "") => {
     q = "query=" + search;
   }
   const respone = axios.get(
-    `https://api.themoviedb.org/3/search/movie?${q}include_adult=false&language=en-US&page=1`,
+    `https://api.themoviedb.org/3/search/movie?${q}&include_adult=false&language=en-US&page=1`,
     options
   );
 
@@ -22,7 +22,7 @@ export const fetchFromTmdbSearch = (search = "") => {
 
 export const fetchFromTmdbTop = () => {
   const respone = axios.get(
-    `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1`,
+    `https://api.themoviedb.org/3/trending/movie/day?language=en-US&page=1`,
     options
   );
 
@@ -41,6 +41,15 @@ export const fetchFromTmdbId = (id) => {
 export const fetchFromTmdbCast = (id) => {
   const respone = axios.get(
     `https://api.themoviedb.org/3/movie/${id}/credits?language=en-US`,
+    options
+  );
+
+  return respone;
+};
+
+export const fetchFromTmdbRev = (id) => {
+  const respone = axios.get(
+    `https://api.themoviedb.org/3/movie/${id}/reviews?language=en-US&page=1`,
     options
   );
 

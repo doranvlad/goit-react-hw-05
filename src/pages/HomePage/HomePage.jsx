@@ -5,7 +5,9 @@ function HomePage({ setTrends }) {
   return (
     <>
       <h1>Trending today</h1>
-      <MovieList movieList={setTrends} />
+      <div className={s.listwrap}>
+        <MovieList movieList={setTrends} />
+      </div>
     </>
   );
 }
